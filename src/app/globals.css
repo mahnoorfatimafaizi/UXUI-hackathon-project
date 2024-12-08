@@ -2,26 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body{
+    background: white;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Set default font and text color */
+@layer base {
+    html, body {
+      font-family: 'Clash Display', sans-serif; /* Replace with your desired font */
+      color: #2A254B; /* Replace with your desired text color */
+    }
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
+  
