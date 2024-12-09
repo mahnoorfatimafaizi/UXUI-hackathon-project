@@ -9,7 +9,7 @@ export default function AboutPage() {
     <div className="bg-white">
       <div className="relative w-full h-[20px] md:h-[30px] mb-5">
         <Image
-          src="/images/about.png" // Update with your banner image path
+          src="/images/about.png" 
           alt="Banner"
           layout="fill"
           objectFit="cover"
@@ -51,7 +51,7 @@ export default function AboutPage() {
         </div>
         <div>
           <Image
-            src="/images/section2.png" // Replace with actual image path
+            src="/images/section2.png" 
             alt="Yellow chair"
             layout="responsive"
             width={600}
@@ -65,8 +65,8 @@ export default function AboutPage() {
       <section className="grid md:grid-cols-2 gap-2  py-12">
         <div>
           <Image
-            src="/images/section3.png" // Replace with actual image path
-            alt="Interior design"
+            src="/images/section3.png" 
+        
             layout="responsive"
             width={600}
             height={400}
