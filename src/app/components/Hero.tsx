@@ -25,7 +25,7 @@ export default function HeroSection() {
         {/* Image */}
         <div className="flex-shrink-0 hidden sm:block">
           <Image
-            src="/images/chair.png" 
+            src="/images/chair.png" // Replace with your Next.js image link
             alt="Chair Image"
             width={500}
             height={500}
