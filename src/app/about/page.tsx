@@ -66,7 +66,7 @@ export default function AboutPage() {
         <div>
           <Image
             src="/images/section3.png" 
-        
+            alt="Yellow chair"
             layout="responsive"
             width={600}
             height={400}
