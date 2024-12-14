@@ -1,17 +1,22 @@
-"use client"
-
-import Link from "next/link";
-import React, { useState } from "react";
+import Link from "next/link"
+import Menu from "./Menu"
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+    return (
+        <header className="bg-white shadow-sm">
+           <div className='h-20 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 relative md:hidden' >
 
-  return (
-    <header className="bg-white shadow-sm">
-      {/* Top Navigation Bar */}
-      <div className="flex items-center justify-between px-4 sm:px-6 lg:px-8 h-16">
-        {/* Left Section: Search Icon (Hidden on small screens) */}
-        <div className="hidden sm:flex items-center">
+            {/* Mobile Screen */}
+            <div className='h-full flex items-center justify-between md:hidden'>
+        <Link href="/">
+        <div className='text-xl font-semibold text-customPurple'>Avion</div></Link>
+        <Menu />
+        </div>
+        </div>
+
+        {/* full screen */}
+           <div className=" hidden md:flex items-center justify-between px-4 sm:px-6 lg:px-8 h-16 ">
+           <div className="hidden sm:flex items-center">
           <Link href="./listing">
           <button aria-label="Search" className="text-gray-600 hover:text-gray-800">
             <svg
@@ -33,8 +38,8 @@ const Header = () => {
           </Link>
         </div>
 
-        {/* Center Section: Logo */}
-        <div>
+         {/* Center Section: Logo */}
+         <div>
           <Link href="/">
           <h1 className="text-xl font-semibold text-customPurple">Avion</h1>
           </Link>
@@ -42,26 +47,6 @@ const Header = () => {
 
         {/* Right Section */}
         <div className="flex items-center">
-          {/* Hamburger Menu (Visible on small screens) */}
-          <button
-            className="sm:hidden text-gray-600 hover:text-gray-800"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
 
           {/* Cart and Profile Icons (Hidden on small screens) */}
           <div className="hidden sm:flex items-center space-x-6">
@@ -109,93 +94,35 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Menu (Visible when open) */}
-      {isMenuOpen && (
-        <div className="sm:hidden px-4 pb-4">
-          <ul className="space-y-4">
-            <li>
-              <a href="#" className="block text-gray-600 hover:text-customPurple">
-                Plant pots
-              </a>
-            </li>
-            <li>
-              <a href="#" className="block text-gray-600 hover:text-customPurple">
-                Ceramics
-              </a>
-            </li>
-            <li>
-              <a href="#" className="block text-gray-600 hover:text-customPurple">
-                Tables
-              </a>
-            </li>
-            <li>
-              <a href="#" className="block text-gray-600 hover:text-customPurple">
-                Chairs
-              </a>
-            </li>
-            <li>
-              <a href="#" className="block text-gray-600 hover:text-customPurple">
-                Crockery
-              </a>
-            </li>
-            <li>
-              <a href="#" className="block text-gray-600 hover:text-customPurple">
-                Tableware
-              </a>
-            </li>
-            <li>
-              <a href="#" className="block text-gray-600 hover:text-customPurple">
-                Cutlery
-              </a>
-            </li>
-          </ul>
-        </div>
-      )}
-
-      {/* Category Links (Visible on larger screens) */}
+      {/* Navigation Menu (Hidden on small screens) */}
       <nav className="hidden sm:block border-t text-customPurple">
         <ul className="flex items-center justify-center space-x-6 py-4">
           <li>
-            <a href="#" className="hover:text-customPurple">
-              Plant pots
-            </a>
+            <Link href="#" className="hover:text-customPurple">Plant pots</Link>
           </li>
           <li>
-            <a href="#" className="hover:text-customPurple">
-              Ceramics
-            </a>
+            <Link href="#" className="hover:text-customPurple">Ceramics</Link>
           </li>
           <li>
-            <a href="#" className="hover:text-customPurple">
-              Tables
-            </a>
+            <Link href="#" className="hover:text-customPurple">Tables</Link>
           </li>
           <li>
-            <a href="#" className="hover:text-customPurple">
-              Chairs
-            </a>
+            <Link href="#" className="hover:text-customPurple">Chairs</Link>
           </li>
           <li>
-            <a href="#" className="hover:text-customPurple">
-              Crockery
-            </a>
+            <Link href="#" className="hover:text-customPurple">Crockery</Link>
           </li>
           <li>
-            <a href="#" className="hover:text-customPurple">
-              Tableware
-            </a>
+            <Link href="#" className="hover:text-customPurple">Tableware</Link>
           </li>
           <li>
-            <a href="#" className="hover:text-customPurple">
-              Cutlery
-            </a>
+            <Link href="#" className="hover:text-customPurple">Cutlery</Link>
           </li>
         </ul>
       </nav>
-    </header>
-  );
-};
-
-export default Header;
+        </header>
+    )
+}
+export default Header
 
 
