@@ -22,7 +22,7 @@ const SearchCartModel = () => {
        <form className="flex item-center justify between gap-4 bg-gray-100 p-2 rounded-md flex-1" onSubmit={handleSearch}>
       <input type="text" name="name" placeholder="Search"  className="flex-1"/>
       <button className="cursor-pointer">
-      <button className='rounded-md py-3 px-4 bg-customPurple text-white'>Search</button>
+      <button className='rounded-md py-3 px-4 bg-custompurple text-white'>Search</button>
       </button>
 
 
