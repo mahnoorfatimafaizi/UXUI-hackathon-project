@@ -5,11 +5,13 @@ import Link from "next/link";
 import {  useRouter } from "next/navigation";
 import { useState } from "react";
 import ShoppingCartModel from "./ShoppingCartModel";
+import SearchCartModel from "./SearchCartModel";
 
 
 const HeaderIcons = () => {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
   const [isShoppingCartOpen, setIsShoppingCartOpen] = useState(false);
+  const [isSearchCartOpen, setIsSearchOpen] = useState(false);
 
 
   const router = useRouter();
@@ -29,7 +31,7 @@ const isLoggedIn = false;
 
 
   return (
-    <div className="flex items-center gap-4 xl:gap-6 relative">
+    <div className=" hidden md:flex items-center gap-4 xl:gap-6 relative">
       <Image
         src="/images/profile.png"
         alt=""
@@ -54,15 +56,30 @@ const isLoggedIn = false;
       width={22}
       height={22}
       onClick={() => setIsShoppingCartOpen((prev) => !prev)} />
-      <div className="absolute -top-4 -right-4 w-6 h-6 bg-customPurple rounded-full text-white text-sm flex ic justify-center">2</div>
       </div>
 
       {isShoppingCartOpen && (
         <ShoppingCartModel />
       )}
 
+<div className="hidden sm:flex items-center">
+      <div className="cursor-pointer">
+      <Image 
+      src="/images/search.png"
+      alt=""
+      width={22}
+      height={22}
+      onClick={() => setIsSearchOpen((prev) => !prev)} />
+
+      </div>
+
+      {isSearchCartOpen && (
+        <SearchCartModel />
+      )}
+
       
     
+    </div>
     </div>
   );
 };

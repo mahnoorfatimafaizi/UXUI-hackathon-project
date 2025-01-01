@@ -5,7 +5,7 @@ import Image from "next/image";
 import NewCeramics from "@/app/components/NewCeramics";
 import BrandFeatures from "@/app/components/BrandFeatures";
 import NewsletterSignup from "@/app/components/NewsletterSignup";
-import Header from "@/app/components/Header";
+
 
 // Define the Product type
 type Product = {
@@ -84,7 +84,7 @@ export default function ProductPage() {
 
   return (
     <div>
-      <Header />
+      
       <div className="px-8 py-12">
         <div className="flex flex-col lg:flex-row items-center lg:items-start space-y-6 lg:space-y-0 lg:space-x-12">
           {/* Product Image */}

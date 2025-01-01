@@ -1,23 +1,14 @@
 import Image from 'next/image';
-import Header from '../components/Header';
-import BrandFeatures from '../components/BrandFeatures';
-import NewsletterSignup from '../components/NewsletterSignup';
+
+import BrandFeatures from '../../components/BrandFeatures';
+import NewsletterSignup from '../../components/NewsletterSignup';
 import Link from 'next/link';
 
 export default function AboutPage() {
   return (
     <div className="bg-white">
-      <div className="relative w-full h-[20px] md:h-[30px] mb-5">
-        <Image
-          src="/images/about.png" 
-          alt="Banner"
-          layout="fill"
-          objectFit="cover"
-          priority
-          className="z-0"
-        />
-      </div>
-      <Header />
+      
+      
       {/* Header Section */}
       <section className="text-center px-4 py-12">
         
