@@ -1,7 +1,6 @@
 import Link from "next/link"
 import Menu from "./Menu"
 
-import SearchIcon from "./SearchIcon"
 import HeaderIcons from "./HearderIcons"
 
 const Header = () => {
